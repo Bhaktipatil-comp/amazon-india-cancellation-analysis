@@ -1,0 +1,6 @@
+data/raw/
+data/clean/
+DATASET 1/
+DATASET 2/
+.ipynb_checkpoints/
+__pycache__/
