@@ -1,0 +1,9 @@
+SELECT ship_state,
+       COUNT(*) AS order_lines,
+       SUM(is_cancelled) AS cancelled,
+       ROUND(100.0 * SUM(is_cancelled) / COUNT(*), 1) AS cancel_rate_pct
+FROM orders
+WHERE ship_state IS NOT NULL AND ship_state <> 'Apo'
+GROUP BY ship_state
+HAVING COUNT(*) >= 500
+ORDER BY cancel_rate_pct DESC;
