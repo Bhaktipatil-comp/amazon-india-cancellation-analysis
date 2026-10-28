@@ -4,3 +4,4 @@ DATASET 1/
 DATASET 2/
 .ipynb_checkpoints/
 __pycache__/
+*.db
